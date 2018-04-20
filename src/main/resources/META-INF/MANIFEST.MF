@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Built-By: weixx
+Build-Jdk: 1.7.0_45
+Created-By: weixx
+Archiver-Version: Plexus Archiver

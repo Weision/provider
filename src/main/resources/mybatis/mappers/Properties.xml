@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxx.mapper.PropertiesMapper">
+	<select id="getPropertiesByKey" resultType="Properties" parameterType="String">
+		SELECT property_key as propertyKey, property_value as propertyValue
+		  FROM b_properties
+		 WHERE property_key = #{propertyKey}
+	</select>
+
+	<select id="getPropertiess" resultType="Properties">
+		SELECT property_key as propertyKey, property_value as propertyValue
+		  FROM b_properties
+	</select>
+	
+	<!-- 
+	CREATE TABLE `b_properties` (
+  `property_key` varchar(40) NOT NULL COMMENT '数据字典键',
+  `property_value` varchar(1024) NOT NULL COMMENT '数据字典值',
+  `remark` varchar(255) DEFAULT NULL,
+  `mod_time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `operator` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  PRIMARY KEY (`property_key`)
+) ENGINE=ndbcluster DEFAULT CHARSET=utf8 COMMENT='数据字典表'-->
+</mapper>
+

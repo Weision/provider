@@ -1,1 +1,3 @@
-# provider
+# provider dubbo的提供方
+与consumer工程相对应
+一个dubbo的提供方 一个dubbo的消费方
